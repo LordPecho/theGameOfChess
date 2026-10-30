@@ -1,4 +1,13 @@
 package pieces;
+/**
+ * Class for the chess pieces of type: rook
+ * 
+ * this is a child of => Piece
+ * @author Almir
+ *
+ * Piece
+ */
+
 
 public class Rook extends Piece {
     
