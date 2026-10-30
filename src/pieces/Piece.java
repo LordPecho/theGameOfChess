@@ -9,14 +9,14 @@ package pieces;
 
 public class Piece {
     
-    protected String typeOfPiece;
+    private String typeOfPiece;
     //attribute(marker) to check piece color
-    protected Boolean isWhite;
+    private Boolean isWhite;
     //attribute(marker) to check if the piece is selected
-    protected Boolean isSelected;
+    private Boolean isSelected;
     //attributes(markers) that indicate the location of the piece 
-    protected int row;
-    protected int col;
+    private int row;
+    private int col;
 
     //The geter Methods:
         /**
@@ -48,5 +48,36 @@ public class Piece {
         this.row = newRow;
         this.col = newCol;
     }
+
+    /**
+     * This method is meant to be overriden in the Child to make the logic for the movement for each Piece
+     * 
+     * @param row the row number of the piece
+     * @param col the collumn number of the piece
+     */
+    public void getMovement(int row, int col){
+        //Empty for now
+    }
+
+    protected void setTypeOfPiece(String type){
+        this.typeOfPiece = type;
+    }
+
+    public boolean getIsSelected(){
+        return this.isSelected;
+    }
+
+    public void setIsSelected(boolean isSelected){
+        this.isSelected = isSelected;
+    }
    
+    /**
+     * Set piece color white or black(true or false)
+     * to set the piece color to white must be set to true
+     * to set the piece color to black must be set to false
+     * @param isWhite boolean value true = white; false = black
+     */
+    protected void setPieceColor(boolean isWhite){
+        this.isWhite = isWhite;
+    }
 }
