@@ -63,6 +63,10 @@ public class Piece {
         this.typeOfPiece = type;
     }
 
+    public String getTypeOfPiece(){
+        return this.typeOfPiece;
+    }
+
     public boolean getIsSelected(){
         return this.isSelected;
     }
@@ -79,5 +83,9 @@ public class Piece {
      */
     protected void setPieceColor(boolean isWhite){
         this.isWhite = isWhite;
+    }
+
+    public boolean getPieceColor(){
+        return this.isWhite;
     }
 }
