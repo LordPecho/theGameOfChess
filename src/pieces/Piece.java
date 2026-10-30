@@ -9,13 +9,14 @@ package pieces;
 
 public class Piece {
     
+    protected String typeOfPiece;
     //attribute(marker) to check piece color
-    private Boolean isWhite;
+    protected Boolean isWhite;
     //attribute(marker) to check if the piece is selected
-    private Boolean isSelected;
+    protected Boolean isSelected;
     //attributes(markers) that indicate the location of the piece 
-    private int row;
-    private int col;
+    protected int row;
+    protected int col;
 
     //The geter Methods:
         /**
