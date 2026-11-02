@@ -18,6 +18,26 @@ public class Piece {
     private int row;
     private int col;
 
+
+    public Piece(){}
+
+    /**
+     * Constructor to set the values of the piece 
+     * location (row,col) 
+     * color(isWhite: true=WHITE; false=BLACK)
+     * type [set the type of the piece (can be: pawn, rook, knight, bishop, queen, king)]
+     * 
+     * @param row row id of the piece
+     * @param col collumn id of the piece
+     * @param isWhite set the piece color (true=WHITE; false=BLACK)
+     * @param type set the type of the piece (can be: pawn, rook, knight, bishop, queen, king)
+     */
+    public Piece(int row, int col,boolean isWhite, String type){
+        this.row = row;
+        this.col = col;
+        this.isWhite = isWhite;
+        this.typeOfPiece = type;
+    }
     //The geter Methods:
     /**
      * Returns the row of this piece

@@ -20,8 +20,7 @@ public class Pawn extends Piece  {
      * @param isWhite set the color of the Piece true = WHITE; false = BLACK
      */
     public Pawn(int row, int col, boolean isWhite){
-    this.setTypeOfPiece ("pawn");
-    this.setPieceColor(isWhite);
-    this.setCord(row, col);
+        // using the parent constructor
+        super(row, col, isWhite, "pawn");
     }
 }

@@ -21,8 +21,7 @@ public class Queen extends Piece  {
      * @param isWhite set the color of the Piece true = WHITE; false = BLACK
      */
     public Queen(int row, int col, boolean isWhite){
-    this.setTypeOfPiece ("queen");
-    this.setPieceColor(isWhite);
-    this.setCord(row, col);
+        // using the parent constructor
+        super(row, col, isWhite, "queen");
     } 
 }
