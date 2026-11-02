@@ -10,6 +10,8 @@ package pieces;
 
 public class Pawn extends Piece  {
 
+    private int startingRow;
+
     //The default value = pawn
     /**
      * Set the pawn piece
@@ -22,5 +24,20 @@ public class Pawn extends Piece  {
     public Pawn(int row, int col, boolean isWhite){
         // using the parent constructor
         super(row, col, isWhite, "pawn");
+        this.startingRow = row;
     }
+
+        
+    @Override 
+    public boolean getMovement(int rowInput, int colInput){
+
+        if((this.getCol() == colInput && this.getRow()+1 == rowInput) || 
+            (this.getCol() == colInput) && this.getRow()+2 == rowInput && this.getRow() == startingRow){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }

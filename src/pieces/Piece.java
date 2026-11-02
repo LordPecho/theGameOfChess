@@ -77,8 +77,8 @@ public class Piece {
      * @param row the row number of the piece
      * @param col the collumn number of the piece
      */
-    public void getMovement(int row, int col){
-        //Empty for now
+    public boolean getMovement(int row, int col){
+        return false;//Empty for now
     }
     public void getAttack(int row, int col){
         //attacking logic
