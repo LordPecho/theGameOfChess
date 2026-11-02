@@ -31,8 +31,10 @@ public class Pawn extends Piece  {
     @Override 
     public boolean getMovement(int rowInput, int colInput){
 
-        if((this.getCol() == colInput && this.getRow()+1 == rowInput) || 
-            (this.getCol() == colInput) && this.getRow()+2 == rowInput && this.getRow() == startingRow){
+        if((this.getCol() == colInput && this.getRow()+1 == rowInput && this.getPieceColor()) || 
+            (this.getCol() == colInput) && this.getRow()+2 == rowInput && this.getRow() == startingRow && this.getPieceColor() ||
+            (this.getCol() == colInput && this.getRow()-1 == rowInput && !this.getPieceColor()) || 
+            (this.getCol() == colInput) && this.getRow()-2 == rowInput && this.getRow() == startingRow && !this.getPieceColor()){
             return true;
         }
         else{
@@ -40,7 +42,7 @@ public class Pawn extends Piece  {
         }
     }
 
-    public void testPawnMovement(int colInput, boolean isWhite){
+    public void testPawnMovement(int colInput){
 
         for(int i=0; i<8; i++){
             System.out.println("Test for ROW: "+ i + " COL: " + colInput + ": " + this.getMovement(i, colInput));
