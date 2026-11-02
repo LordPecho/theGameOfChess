@@ -24,4 +24,28 @@ public class Rook extends Piece {
         // using the parent constructor
         super(row, col, isWhite, "rook");
     } 
+
+        @Override 
+    public boolean getMovement(int rowInput, int colInput){
+
+        if(this.getRow()==rowInput || this.getCol()==colInput){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public void testRookMovementColInput(int colInput){
+
+    for(int i=0; i<8; i++){
+        System.out.println("Test for ROW: "+ i + " COL: " + colInput + ": " + this.getMovement(i, colInput));
+        }
+    }
+        public void testRookMovementRowInput(int rowInput){
+
+    for(int i=0; i<8; i++){
+        System.out.println("Test for ROW: "+ rowInput + " COL: " + i + ": " + this.getMovement(rowInput, i));
+        }
+    }
 }

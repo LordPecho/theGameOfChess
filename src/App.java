@@ -1,4 +1,5 @@
 import pieces.Pawn;
+import pieces.Rook;
 import pieces.Pawn.*;
 
 public class App {
@@ -7,13 +8,19 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        Pawn whitePawn01 = new Pawn(1, 0, true);
-        Pawn blackPawn01 = new Pawn(6,0,false);
+        //MOVE THIS TO A SEPERATE CLASS AND MAKE IT
+        // Pawn whitePawn01 = new Pawn(1, 0, true);
+        // Pawn blackPawn01 = new Pawn(6,0,false);
 
-        System.out.print("Test for whitePawn01:\n");
-        whitePawn01.testPawnMovement(0);
-        System.out.print("Test for blackPawn01:\n");
-        blackPawn01.testPawnMovement(0);
+        // System.out.print("Test for whitePawn01:\n");
+        // whitePawn01.testPawnMovement(0);
+        // System.out.print("Test for blackPawn01:\n");
+        // blackPawn01.testPawnMovement(0);
+
+        Rook rook01 = new Rook(0,0,true);
+        // rook01.testRookMovementColInput(0);
+        // rook01.testRookMovementRowInput(0);
+        System.out.print(rook01.getMovement(1, 1));
 
     }
 }
