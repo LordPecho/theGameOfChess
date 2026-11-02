@@ -20,7 +20,8 @@ public class Knight extends Piece  {
      * @param isWhite set the color of the Piece true = WHITE; false = BLACK
      */
     public Knight(int row, int col, boolean isWhite){
-    super(row, col, isWhite, "knight");
+        // using the parent constructor
+        super(row, col, isWhite, "knight");
     }
 
 }

@@ -40,4 +40,11 @@ public class Pawn extends Piece  {
         }
     }
 
+    public void testPawnMovement(int colInput, boolean isWhite){
+
+        for(int i=0; i<8; i++){
+            System.out.println("Test for ROW: "+ i + " COL: " + colInput + ": " + this.getMovement(i, colInput));
+        }
+    }
+
 }
