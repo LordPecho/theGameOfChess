@@ -51,19 +51,4 @@ public class Rook extends Piece {
             
         }
     }
-
-    @Deprecated 
-    public void testRookMovementColInput(int colInput){
-
-    for(int i=0; i<8; i++){
-        System.out.println("Test for ROW: "+ i + " COL: " + colInput + ": " + this.getMovement(i, colInput));
-        }
-    }
-
-    @Deprecated 
-    public void testRookMovementRowInput(int rowInput){
-    for(int i=0; i<8; i++){
-        System.out.println("Test for ROW: "+ rowInput + " COL: " + i + ": " + this.getMovement(rowInput, i));
-        }
-    }
 }

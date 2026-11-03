@@ -1,5 +1,7 @@
 package board;
 
+import pieces.Piece;
+
 /**
  * Class for the Board
  * this will be used to create an array of BoardSquares for a 8x8 array
@@ -19,6 +21,12 @@ public class BoardSquare {
     private int col;
 
     private boolean isEmpty; // to be used to check for empty locations for movement
-    private boolean isWhite; // used to check color of piece on the square; used for attack
+    private Piece piece;
 
+    public BoardSquare(int row, int col, boolean isEmpty, Piece piece){
+        this.row = row;
+        this.col = col;
+        this.isEmpty = isEmpty;
+        this.piece = piece;
+    }
 }
