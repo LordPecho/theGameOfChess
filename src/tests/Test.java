@@ -30,6 +30,7 @@ public class Test {
             System.out.println(temp +"\n");
             
         }
+        
     }
 
     //initial plan was to make each child of every piece child to have a static test but 

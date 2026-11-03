@@ -27,13 +27,13 @@ public class CreationOfThePieces {
     private Piece blackQueen = new Queen(7, 4, true);
     private Piece blackKing = new King(7, 3, true);
 
-
+    private int counter = 0;
 
     public void createPieces(){
         for (int i = 0; i < 8; i++){
             for (int j = 0; j < 8; j++){
                 createPawns( i, j);
-
+                createRooks(i, j);
                 //Set WHITE pieces
                 //Set white Pawns
                 //Set BLACK pieces
@@ -45,18 +45,35 @@ public class CreationOfThePieces {
     }
 
     //TO DO MAKE JAVA DOC
-    //create pawns
+    //create PAWNS
     private void createPawns(int row, int col){
-        //Set white Pawns
+        // Set WHITE
         if(row  == 1){
             this.whitePawns[col] = new Pawn(row, col, true);
         }
-        //Set black Pawns
+        // Set BLACK
         if(row  == 6){
             this.blackPawns[col] = new Pawn(row, col, false);
         }
     }
-    private void createRooks(int row, int col){}
+
+    //create ROOKS
+    private void createRooks(int row, int col){
+        // Set WHITE
+        if(row == 0 && (col == 0 || col == 7)){
+            this.whiteRooks[counter] = new Rook(row, col, true);
+            counter++;
+            if(counter>2)
+                counter=0;
+        }
+        // Set BLACK
+        if(row == 7 && (col == 0 || col == 7)){
+            this.blackRooks[counter] = new Rook(row, col, true);
+            counter++;
+            if(counter>2)
+                counter=0;
+        }
+    }
     private void createKnights(int row, int col){}
     private void createBishops(int row, int col){}
 

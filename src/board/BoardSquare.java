@@ -23,14 +23,10 @@ public class BoardSquare {
     private boolean isEmpty; // to be used to check for empty locations for movement
     private Piece piece;
 
-    public void setBoardSquare(int row, int col, boolean isEmpty, Piece piece){
+    public BoardSquare(int row, int col, boolean isEmpty, Piece piece){
         this.row = row;
         this.col = col;
         this.isEmpty = isEmpty;
         this.piece = piece;
-    }
-
-    public void checkTypeOfPiece(){
-        System.out.println(this.piece.getTypeOfPiece());
     }
 }
