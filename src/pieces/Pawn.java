@@ -42,10 +42,19 @@ public class Pawn extends Piece  {
         }
     }
 
-    public void testPawnMovement(int colInput){
-
-        for(int i=0; i<8; i++){
-            System.out.println("Test for ROW: "+ i + " COL: " + colInput + ": " + this.getMovement(i, colInput));
+    public void testPawnMovement(){
+        for (int i=0; i<8; i++){
+            String temp = "";
+            for (int j = 0; j<8; j++){
+                if(this.getMovement(i,j)){
+                    temp= temp + i + j + "T" +" ";
+                }else{
+                    temp= temp + i + j + "F" +" ";
+                }
+                
+            }
+            System.out.println(temp +"\n");
+            
         }
     }
 
