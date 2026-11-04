@@ -29,4 +29,8 @@ public class BoardSquare {
         this.isEmpty = isEmpty;
         this.piece = piece;
     }
+
+    public void setPiece(Piece piece){
+        this.piece = piece;
+    }
 }
