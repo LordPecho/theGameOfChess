@@ -1,8 +1,6 @@
 package board;
 
-
-
-// Piece and its child imports
+// Piece and all of its child imports
 import pieces.Piece;
 import pieces.Queen;
 import pieces.Pawn;
@@ -15,7 +13,7 @@ public class CreationOfThePieces {
     
     private BoardSquare board[][] = new BoardSquare[8][8];
 
-    public void createPieces(){
+    public CreationOfThePieces(){
         for (int i = 0; i < 8; i++){
             for (int j = 0; j < 8; j++){
                 this.createPawns( i, j);
