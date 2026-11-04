@@ -26,4 +26,13 @@ public class Bishop extends Piece {
         super(row, col, isWhite, "bishop");
     }
 
+    @Override 
+    public boolean getMovement(int rowInput, int colInput){
+        if(Math.abs(colInput - this.getCol()) == Math.abs(rowInput - this.getRow())){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
