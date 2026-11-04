@@ -24,4 +24,13 @@ public class Queen extends Piece  {
         // using the parent constructor
         super(row, col, isWhite, "queen");
     } 
+    @Override 
+    public boolean getMovement(int rowInput, int colInput){
+        if((Math.abs(colInput - this.getCol()) == Math.abs(rowInput - this.getRow())) || 
+        (this.getRow()==rowInput || this.getCol()==colInput)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

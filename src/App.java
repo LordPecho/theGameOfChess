@@ -1,5 +1,6 @@
 import pieces.Bishop;
 import pieces.Pawn;
+import pieces.Queen;
 import pieces.Rook;
 
 
@@ -21,6 +22,9 @@ public class App {
         // rook01.testRookMovement();
         
         Bishop bishop01 = new Bishop(4,4,true);
-        bishop01.testMovement();
+        // bishop01.testMovement();
+
+        Queen queen01 = new Queen(4, 4, false);
+        queen01.testMovement();
     }
 }
