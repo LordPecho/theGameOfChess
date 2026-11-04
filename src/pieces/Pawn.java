@@ -41,21 +41,5 @@ public class Pawn extends Piece  {
             return false;
         }
     }
-    @Deprecated // because we added a testMovement() method in the parent class
-    public void testPawnMovement(){
-        for (int i=0; i<8; i++){
-            String temp = "";
-            for (int j = 0; j<8; j++){
-                if(this.getMovement(i,j)){
-                    temp= temp + i + j + "T" +" ";
-                }else{
-                    temp= temp + i + j + "F" +" ";
-                }
-                
-            }
-            System.out.println(temp +"\n");
-            
-        }
-    }
 
 }
