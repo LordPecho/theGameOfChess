@@ -14,16 +14,6 @@ import pieces.Knight;
 public class CreationOfThePieces {
     
     private BoardSquare board[][] = new BoardSquare[8][8];
-    // WHITE PIECES
-    private Piece whiteQueen = new Queen(0, 4, true);
-    private Piece whiteKing = new King(0, 3, true);
-    
-    //BLACK PIECES
-
-    private Piece blackQueen = new Queen(7, 4, true);
-    private Piece blackKing = new King(7, 3, true);
-
-    private int counter = 0;
 
     public void createPieces(){
         for (int i = 0; i < 8; i++){
