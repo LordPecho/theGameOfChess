@@ -136,6 +136,7 @@ public class CreationOfThePieces {
     //     }
     private void setPiece(int row, int col,Piece piece){
         this.board[row][col].setPiece(piece);
+        this.board[row][col].setEmptyToOccupied();
     }
 
 }

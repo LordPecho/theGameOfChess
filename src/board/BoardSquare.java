@@ -33,4 +33,7 @@ public class BoardSquare {
     public void setPiece(Piece piece){
         this.piece = piece;
     }
+    public void setEmptyToOccupied(){
+        this.isEmpty = true;
+    }
 }
