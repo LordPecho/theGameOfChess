@@ -20,7 +20,7 @@ public class BoardSquare {
     private int row;
     private int col;
 
-    private boolean isEmpty; // to be used to check for empty locations for movement
+    private boolean isEmpty = true; // to be used to check for empty locations for movement
     private Piece piece;
 
     public BoardSquare(int row, int col, boolean isEmpty, Piece piece){
@@ -33,7 +33,28 @@ public class BoardSquare {
     public void setPiece(Piece piece){
         this.piece = piece;
     }
+
+    /**
+     * Set the piece to occupied or not 
+     */
     public void setEmptyToOccupied(){
-        this.isEmpty = true;
+        this.isEmpty = false;
+    }
+
+    /**
+     * Set the piece to occupied or not 
+     * TRUE: Occupied by a piece
+     * FALSE: is empty
+     * @param occupied (TRUE: Occupied by a piece; FALSE: is empty)
+     */
+    public void setEmptyToOccupied(boolean occupied){
+        this.isEmpty = !occupied;
+    }
+
+    public boolean isEmpty(){
+        return this.isEmpty;
+    }
+    public Piece getPiece(){
+        return this.piece;
     }
 }

@@ -13,18 +13,21 @@ public class CreationOfThePieces {
     
     private BoardSquare board[][] = new BoardSquare[8][8];
 
+
     public CreationOfThePieces(){
-        for (int i = 0; i < 8; i++){
-            for (int j = 0; j < 8; j++){
-                this.createPawns( i, j);
-                this.createRooks(i, j);
-                this.createKnights(i, j);
-                this.createBishops(i, j);
-                this.createQueens(i, j);
-                this.createKings(i, j);
-            }
-        }
         
+            for (int i = 0; i < 8; i++){
+                for (int j = 0; j < 8; j++){
+                    board[i][j] = new BoardSquare(i, j, true, new Piece());
+                    this.createPawns( i, j);
+                    this.createRooks(i, j);
+                    this.createKnights(i, j);
+                    this.createBishops(i, j);
+                    this.createQueens(i, j);
+                    this.createKings(i, j);
+                }
+            }
+            
     }
 
 
@@ -117,24 +120,45 @@ public class CreationOfThePieces {
         }
 
     }
-
-
-    //   for (int i=0; i<8; i++){
-    //         String temp = "";
-    //         for (int j = 0; j<8; j++){
-    //             if(getMovement_i_j){
-    //                 temp= temp + i + j + "T" +" ";
-    //             }else{
-    //                 temp= temp + i + j + "F" +" ";
-    //             }
-                
-    //         }
-    //         System.out.println(temp +"\n");
-            
-    //     }
+    /**
+     * 
+     * @param row
+     * @param col
+     * @param piece
+     */
     private void setPiece(int row, int col,Piece piece){
         this.board[row][col].setPiece(piece);
         this.board[row][col].setEmptyToOccupied();
     }
+
+    /**
+     * 
+     * @param row
+     * @param col
+     * @param piece
+     * @param occupied
+     */
+    private void setPiece(int row, int col,Piece piece, boolean occupied){
+        this.board[row][col].setPiece(piece);
+        this.board[row][col].setEmptyToOccupied(occupied);
+    }
+
+        public void testPieceLocations(){
+            for (int i=0; i<8; i++){
+                String temp = "";
+                for (int j = 0; j<8; j++){
+                    if(this.board[i][j].isEmpty() != true){
+                        if(this.board[i][j].getPiece().getTypeOfPiece() == "pawn")
+                        temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + "  ";
+                        else
+                        temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + " "; 
+                    }
+                    else 
+                        temp = temp + i + j + ": " + "empty" + " ";
+            }
+            System.out.println(temp +"\n");
+            
+        }
+    }// testMovement()
 
 }

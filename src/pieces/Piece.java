@@ -159,5 +159,5 @@ public class Piece {
             System.out.println(temp +"\n");
             
         }
-    }
+    }// testMovement()
 }
