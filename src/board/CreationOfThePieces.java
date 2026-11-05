@@ -131,32 +131,23 @@ public class CreationOfThePieces {
         this.board[row][col].setEmptyToOccupied();
     }
 
-    /**
-     * 
-     * @param row
-     * @param col
-     * @param piece
-     * @param occupied
-     */
-    private void setPiece(int row, int col,Piece piece, boolean occupied){
-        this.board[row][col].setPiece(piece);
-        this.board[row][col].setEmptyToOccupied(occupied);
+    public void testIndividualSquare(int row, int col){
+        this.board[row][col].printRowAndCol();
     }
-
-        public void testPieceLocations(){
-            for (int i=0; i<8; i++){
-                String temp = "";
-                for (int j = 0; j<8; j++){
-                    if(this.board[i][j].isEmpty() != true){
-                        if(this.board[i][j].getPiece().getTypeOfPiece() == "pawn")
-                        temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + "  ";
-                        else
+    public void testPieceLocations(){
+        for (int i=0; i<8; i++){
+            String temp = "";
+            for (int j = 0; j<8; j++){
+                if(this.board[i][j].isEmpty() != true){
+                    if(this.board[i][j].getPiece().getTypeOfPiece() == "pawn")
+                        temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + " git ";
+                    else
                         temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + " "; 
-                    }
-                    else 
-                        temp = temp + i + j + ": " + "empty" + " ";
-            }
-            System.out.println(temp +"\n");
+                }
+                else 
+                    temp = temp + i + j + ": " + "empty" + " ";
+        }
+        System.out.println(temp +"\n");
             
         }
     }// testMovement()

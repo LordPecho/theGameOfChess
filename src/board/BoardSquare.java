@@ -57,4 +57,8 @@ public class BoardSquare {
     public Piece getPiece(){
         return this.piece;
     }
+
+    public void printRowAndCol(){
+        System.out.println("row: " + this.row+ "col: " + this.col);
+    }
 }

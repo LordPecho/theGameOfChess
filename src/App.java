@@ -17,5 +17,6 @@ public class App {
 
         CreationOfThePieces create = new CreationOfThePieces();
         create.testPieceLocations();
+        create.testIndividualSquare(4, 4);
     }
 }
