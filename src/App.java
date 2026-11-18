@@ -1,9 +1,5 @@
 import board.CreationOfThePieces;
-import pieces.Bishop;
-import pieces.Pawn;
-import pieces.Queen;
-import pieces.Rook;
-
+import pieces.King;
 
 
 public class App {
@@ -15,8 +11,10 @@ public class App {
         // Queen queen01 = new Queen(4, 4, false);
         // queen01.testMovement();
 
-        CreationOfThePieces create = new CreationOfThePieces();
-        create.testPieceLocations();
-        create.testIndividualSquare(4, 4);
+        King king01 = new King(4,4, false);
+        king01.testMovement();
+        // CreationOfThePieces create = new CreationOfThePieces();
+        // create.testPieceLocations();
+        // create.testIndividualSquare(4, 4);
     }
 }

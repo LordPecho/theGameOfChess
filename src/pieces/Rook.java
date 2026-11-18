@@ -25,7 +25,7 @@ public class Rook extends Piece {
         super(row, col, isWhite, "rook");
     } 
 
-        @Override 
+    @Override 
     public boolean getMovement(int rowInput, int colInput){
 
         if(this.getRow()==rowInput || this.getCol()==colInput){

@@ -24,4 +24,25 @@ public class King extends Piece  {
         super(row, col, isWhite, "king");
     }
 
+    @Override 
+    public boolean getMovement(int rowInput, int colInput){
+        if( ((this.getCol() == colInput-1) && 
+                ((this.getRow()+1) == rowInput || 
+                (this.getRow()-1) == rowInput || 
+                (this.getRow()) == rowInput)) ||
+
+             ((this.getCol() == colInput) && 
+                ((this.getRow()+1) == rowInput || 
+                (this.getRow()-1) == rowInput)) ||
+
+             ((this.getCol() == colInput+1) && 
+                ((this.getRow()+1) == rowInput || 
+                (this.getRow()-1) == rowInput || 
+                (this.getRow()) == rowInput))){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

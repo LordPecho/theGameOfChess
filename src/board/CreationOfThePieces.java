@@ -47,7 +47,7 @@ public class CreationOfThePieces {
 
     }
 
-    //create ROOKS
+    // create ROOKS
     private void createRooks(int row, int col){
 
         // Set WHITE
@@ -61,7 +61,7 @@ public class CreationOfThePieces {
 
     }
 
-    //create KNIGHTS
+    // create KNIGHTS
     private void createKnights(int row, int col){
 
         // Set WHITE
@@ -76,7 +76,7 @@ public class CreationOfThePieces {
 
     }
 
-    //create BISHOPS
+    // create BISHOPS
     private void createBishops(int row, int col){
 
         // Set WHITE
@@ -121,10 +121,10 @@ public class CreationOfThePieces {
 
     }
     /**
-     * 
-     * @param row
-     * @param col
-     * @param piece
+     * Sets the piece to a Inputed piece, and sets it to occupied
+     * @param row row of the piece
+     * @param col collumn of the piece
+     * @param piece Piece object 
      */
     private void setPiece(int row, int col,Piece piece){
         this.board[row][col].setPiece(piece);

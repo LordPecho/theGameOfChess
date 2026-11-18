@@ -7,7 +7,7 @@ import pieces.Piece;
  * this will be used to create an array of BoardSquares for a 8x8 array
  *  where each Object in the array will be a BoardSquare
  * 
- * this class and it attributes is subject to change 
+ * this class and its attributes is subject to change 
  * 
  * @author Almir
  *
