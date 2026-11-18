@@ -140,7 +140,7 @@ public class CreationOfThePieces {
             for (int j = 0; j<8; j++){
                 if(this.board[i][j].isEmpty() != true){
                     if(this.board[i][j].getPiece().getTypeOfPiece() == "pawn")
-                        temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + " git ";
+                        temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + "  ";
                     else
                         temp = temp + i + j + ": " + this.board[i][j].getPiece().getTypeOfPiece() + " "; 
                 }
