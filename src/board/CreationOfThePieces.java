@@ -21,7 +21,7 @@ public class CreationOfThePieces {
         
             for (int i = 0; i < 8; i++){
                 for (int j = 0; j < 8; j++){
-                    board[i][j] = new BoardSquare(i, j, true, new Piece());
+                    board[i][j] = new BoardSquare(i, j, true, new EmptySquare());
                     this.createPawns( i, j);
                     this.createRooks(i, j);
                     this.createKnights(i, j);

@@ -24,4 +24,10 @@ public class Knight extends Piece  {
         super(row, col, isWhite, "knight");
     }
 
+    @Override
+    public boolean getMovement(int row, int col) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMovement'");
+    }
+
 }

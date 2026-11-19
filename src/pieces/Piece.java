@@ -1,4 +1,7 @@
 package pieces;
+
+import board.BoardSquare;
+
 /**
  * Class for the chess pieces
  * @author Almir
@@ -7,7 +10,7 @@ package pieces;
  */
 
 
-public class Piece {
+public abstract class Piece {
     
     private String typeOfPiece;
     //attribute(marker) to check piece color
@@ -84,9 +87,9 @@ public class Piece {
      * @param row the row number of the piece
      * @param col the collumn number of the piece
      */
-    public boolean getMovement(int row, int col){
-        return false;//Empty for now
-    }
+    public abstract boolean getMovement(int row, int col);
+    // piece to be implimented in the future
+    //public abstract boolean getMovement(int row, int col, BoardSquare square);
     public void getAttack(int row, int col){
         //attacking logic
     }
