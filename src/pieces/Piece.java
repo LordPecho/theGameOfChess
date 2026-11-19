@@ -72,7 +72,14 @@ public class Piece {
     }
 
     /**
-     * This method is meant to be overriden in the Child to make the logic for the movement for each Piece
+     * Movement for the Piece,
+     * it will move according to the type of piece
+     * 
+     * 
+     * still unfinished:
+     * knight movement
+     * implementation needed for attacking(pawns) 
+     * checking for occupied spots on the board 
      * 
      * @param row the row number of the piece
      * @param col the collumn number of the piece

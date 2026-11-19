@@ -28,23 +28,23 @@ public class BoardSquare {
         this.col = col;
         this.isEmpty = isEmpty;
         this.piece = piece;
-    }
+    }//BoardSquare
 
     public void setPiece(Piece piece){
         this.piece = piece;
-    }
+    }//setPiece
 
     /**
-     * Set the piece to occupied or not 
+     * Change the state of the Piece, changes if the Piece is Occupied by another Piece 
      */
     public void setEmptyToOccupied(){
         this.isEmpty = false;
-    }
+    }//setEmptyToOccupied
 
     /**
-     * Set the piece to occupied or not 
-     * TRUE: Occupied by a piece
-     * FALSE: is empty
+     * Change the state of the Piece, changes if the Piece is Occupied by another Piece 
+     * TRUE:    Occupied by a piece
+     * FALSE:   Not occcupied by a piece, is empty
      * @param occupied (TRUE: Occupied by a piece; FALSE: is empty)
      */
     public void setEmptyToOccupied(boolean occupied){

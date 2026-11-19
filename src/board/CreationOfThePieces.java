@@ -14,6 +14,9 @@ public class CreationOfThePieces {
     private BoardSquare board[][] = new BoardSquare[8][8];
 
 
+    /**
+     * Constructor for the start of creation of the board
+     */
     public CreationOfThePieces(){
         
             for (int i = 0; i < 8; i++){
@@ -131,9 +134,18 @@ public class CreationOfThePieces {
         this.board[row][col].setEmptyToOccupied();
     }
 
+    /**
+     * tests an individual square
+     * 
+     * @param row ROW id of the piece to be tested
+     * @param col COL id of the piece to be tested
+     */
     public void testIndividualSquare(int row, int col){
         this.board[row][col].printRowAndCol();
     }
+    /**
+     * Used to test every piece location
+     */
     public void testPieceLocations(){
         for (int i=0; i<8; i++){
             String temp = "";
