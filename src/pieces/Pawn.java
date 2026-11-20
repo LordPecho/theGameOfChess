@@ -27,7 +27,10 @@ public class Pawn extends Piece  {
         this.startingRow = row;
     }
 
-        
+    /**    (non-Javadoc)
+     * 
+     * @see pieces.Piece#getMovement(int, int)
+     */    
     @Override 
     public boolean getMovement(int rowInput, int colInput){
 

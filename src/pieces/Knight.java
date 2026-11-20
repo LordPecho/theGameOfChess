@@ -25,9 +25,13 @@ public class Knight extends Piece  {
     }
 
     @Override
-    public boolean getMovement(int row, int col) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getMovement'");
+    public boolean getMovement(int rowInput, int colInput) {
+        if(((this.getCol() + 2 == colInput || this.getCol() - 2 == colInput) && (this.getRow() + 1 == rowInput ||  this.getRow() - 1 == rowInput)) ||
+            ((this.getRow() + 2 == rowInput || this.getRow() - 2 == rowInput) && (this.getCol() + 1 == colInput ||  this.getCol() - 1 == colInput))){
+                return true;
+            }else{
+                return false;
+            }
     }
 
 }
