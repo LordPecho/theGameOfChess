@@ -49,16 +49,17 @@ public class BoardSquare {
      */
     public void setEmptyToOccupied(boolean occupied){
         this.isEmpty = !occupied;
-    }
+    }//setEmptyToOccupied
 
     public boolean isEmpty(){
         return this.isEmpty;
-    }
+    }//isEmpty
     public Piece getPiece(){
         return this.piece;
-    }
+    }//getPiece
 
     public void printRowAndCol(){
         System.out.println("row: " + this.row+ "col: " + this.col);
-    }
-}
+    }//printRowAndCol
+
+}//BoardSquare end of class

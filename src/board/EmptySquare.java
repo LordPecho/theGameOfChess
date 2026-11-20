@@ -8,6 +8,6 @@ public class EmptySquare extends Piece{
     public boolean getMovement(int row, int col) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("This Piece should not move'");
-    }
+    }//getMovement
     
 }

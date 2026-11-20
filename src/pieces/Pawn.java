@@ -25,7 +25,7 @@ public class Pawn extends Piece  {
         // using the parent constructor
         super(row, col, isWhite, "pawn");
         this.startingRow = row;
-    }
+    }//Pawn
 
     /**    (non-Javadoc)
      * 
@@ -43,6 +43,6 @@ public class Pawn extends Piece  {
         else{
             return false;
         }
-    }
+    }//getMovement
 
-}
+}//Pawn end of class

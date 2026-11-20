@@ -22,7 +22,7 @@ public class Knight extends Piece  {
     public Knight(int row, int col, boolean isWhite){
         // using the parent constructor
         super(row, col, isWhite, "knight");
-    }
+    }//Knight
 
     @Override
     public boolean getMovement(int rowInput, int colInput) {
@@ -32,6 +32,6 @@ public class Knight extends Piece  {
             }else{
                 return false;
             }
-    }
+    }//getMovements
 
 }

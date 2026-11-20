@@ -31,7 +31,7 @@ public class CreationOfThePieces {
                 }
             }
             
-    }
+    }//CreationOfThePieces
 
 
 
@@ -48,7 +48,7 @@ public class CreationOfThePieces {
             this.setPiece(row, col, new Pawn(row, col, false));
         }
 
-    }
+    }//createPawns
 
     // create ROOKS
     private void createRooks(int row, int col){
@@ -62,7 +62,7 @@ public class CreationOfThePieces {
             this.setPiece(row, col, new Rook(row, col, false));
         }
 
-    }
+    }//createRooks
 
     // create KNIGHTS
     private void createKnights(int row, int col){
@@ -77,7 +77,7 @@ public class CreationOfThePieces {
             this.setPiece(row, col, new Knight(row, col, false));
         }        
 
-    }
+    }//createKnights
 
     // create BISHOPS
     private void createBishops(int row, int col){
@@ -92,7 +92,7 @@ public class CreationOfThePieces {
             this.setPiece(row, col, new Bishop(row, col, false));
         }
 
-    }
+    }//createBishops
 
     // create Queens
     private void createQueens(int row, int col){
@@ -107,7 +107,7 @@ public class CreationOfThePieces {
             this.setPiece(row, col, new Queen(row, col, false));
         }
 
-    }
+    }//createQueens
 
     // create KINGS
     private void createKings(int row, int col){
@@ -122,7 +122,7 @@ public class CreationOfThePieces {
             this.setPiece(row, col, new King(row, col, false));
         }
 
-    }
+    }//createKings
     /**
      * Sets the piece to a Inputed piece, and sets it to occupied
      * @param row row of the piece
@@ -132,7 +132,7 @@ public class CreationOfThePieces {
     private void setPiece(int row, int col,Piece piece){
         this.board[row][col].setPiece(piece);
         this.board[row][col].setEmptyToOccupied();
-    }
+    }//setPiece
 
     /**
      * tests an individual square
@@ -142,7 +142,7 @@ public class CreationOfThePieces {
      */
     public void testIndividualSquare(int row, int col){
         this.board[row][col].printRowAndCol();
-    }
+    }//testIndividualSquare
     /**
      * Used to test every piece location
      */
@@ -158,10 +158,10 @@ public class CreationOfThePieces {
                 }
                 else 
                     temp = temp + i + j + ": " + "empty" + " ";
-        }
+        }//
         System.out.println(temp +"\n");
             
         }
-    }// testMovement()
+    }//testPieceLocations()
 
-}
+}//CreationOfThePieces end of class
