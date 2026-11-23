@@ -9,5 +9,11 @@ public class EmptySquare extends Piece{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("This Piece should not move'");
     }//getMovement
+
+    @Override
+    public boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMovement'");
+    }
     
 }

@@ -89,7 +89,7 @@ public abstract class Piece {
      */
     public abstract boolean getMovement(int row, int col);
     // piece to be implimented in the future
-    //public abstract boolean getMovement(int row, int col, BoardSquare square);
+    public abstract boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare);
     public void getAttack(int row, int col){
         //attacking logic
     }

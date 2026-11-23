@@ -1,4 +1,7 @@
 package pieces;
+
+import board.BoardSquare;
+
 /**
  * Class for the chess pieces of type: pawn
  * 
@@ -44,5 +47,11 @@ public class Pawn extends Piece  {
             return false;
         }
     }//getMovement
+
+    @Override
+    public boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMovement'");
+    }
 
 }//Pawn end of class

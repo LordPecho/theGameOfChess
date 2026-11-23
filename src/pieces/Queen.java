@@ -1,4 +1,7 @@
 package pieces;
+
+import board.BoardSquare;
+
 /**
  * Class for the chess pieces of type: queen
  * 
@@ -32,5 +35,10 @@ public class Queen extends Piece  {
         }else{
             return false;
         }
+    }
+    @Override
+    public boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMovement'");
     }
 }
