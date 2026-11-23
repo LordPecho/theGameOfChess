@@ -42,8 +42,9 @@ public class Knight extends Piece  {
         
         @Override
         public boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare) {
-
-            if(newSquare.isEmpty() &&
+            
+            if(((!newSquare.isEmpty() && newSquare.getPiece().getPieceColor() != this.getPieceColor()) ||
+                newSquare.isEmpty()) &&
                     (((oldSquare.getCol() + 2 == newSquare.getCol() || oldSquare.getCol() - 2 == newSquare.getCol()) && 
                         (oldSquare.getRow() + 1 == newSquare.getRow() ||  oldSquare.getRow() - 1 == newSquare.getRow())) ||
                     ((oldSquare.getRow() + 2 == newSquare.getRow() || oldSquare.getRow() - 2 == newSquare.getRow()) && 
@@ -53,8 +54,9 @@ public class Knight extends Piece  {
         }
             else{
                 return false;
-        }//getMovement
-        
-    }
+        }
+    
+
+    }//getMovement
 
 }

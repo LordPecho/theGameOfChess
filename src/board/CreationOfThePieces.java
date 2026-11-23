@@ -31,6 +31,8 @@ public class CreationOfThePieces {
                 }
             }
             
+            //Just for testing (this line here is just temporary, will be used to test if the Pieces can move)
+            //this.setPiece(2, 0, new Pawn(2, 0, false));
     }//CreationOfThePieces
 
 
