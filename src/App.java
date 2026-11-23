@@ -1,7 +1,4 @@
 import board.CreationOfThePieces;
-import pieces.King;
-import pieces.Knight;
-import pieces.Rook;
 
 
 public class App {
