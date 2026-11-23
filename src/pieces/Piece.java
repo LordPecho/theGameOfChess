@@ -80,15 +80,29 @@ public abstract class Piece {
      * 
      * 
      * still unfinished:
-     * knight movement
+     * 
      * implementation needed for attacking(pawns) 
      * checking for occupied spots on the board 
      * 
      * @param row the row number of the piece
      * @param col the collumn number of the piece
+     * @return boolean
      */
     public abstract boolean getMovement(int row, int col);
     // piece to be implimented in the future
+
+    /**
+     * Movement for the Piece,
+     * it will move according to the type of piece
+     * implementation for a specific square on the board
+     * 
+     * WIP
+     * only the knights are implemented
+     * 
+     * @param newSquare the new square on the board where the piece should move
+     * @param oldSquare the old square on the board where the piece should move
+     * @return boolean
+     */
     public abstract boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare);
     public void getAttack(int row, int col){
         //attacking logic
@@ -170,4 +184,19 @@ public abstract class Piece {
             
         }
     }// testMovement()
+    public void testTheBoardMovement(BoardSquare board[][], BoardSquare oldSquare){
+        for (int i=0; i<8; i++){
+            String temp = "";
+            for (int j = 0; j<8; j++){
+                if(this.getMovement(board[i][j], oldSquare)){
+                    temp= temp + i + j + "T" +" ";
+                }else{
+                    temp= temp + i + j + "F" +" ";
+                }
+                
+            }
+            System.out.println(temp +"\n");
+            
+        }
+    }//testTheBoardMovement
 }

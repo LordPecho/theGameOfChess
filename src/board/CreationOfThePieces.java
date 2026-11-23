@@ -164,4 +164,10 @@ public class CreationOfThePieces {
         }
     }//testPieceLocations()
 
+    public BoardSquare[][] getBoard(){
+        return this.board;
+    }
+    public BoardSquare getSingleBoardSquare(int row, int col){
+        return this.board[row][col];
+    }
 }//CreationOfThePieces end of class

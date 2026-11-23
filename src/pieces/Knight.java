@@ -13,6 +13,9 @@ import board.BoardSquare;
 
 public class Knight extends Piece  {
    
+    public Knight(){
+        this.setTypeOfPiece("knight");
+    }
     //The default value = knight
     /**
      * Set the knight piece
@@ -35,12 +38,23 @@ public class Knight extends Piece  {
             }else{
                 return false;
             }
-    }//getMovements
+        }//getMovements
+        
+        @Override
+        public boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare) {
 
-    @Override
-    public boolean getMovement(BoardSquare newSquare, BoardSquare oldSquare) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getMovement'");
+            if(newSquare.isEmpty() &&
+                    (((oldSquare.getCol() + 2 == newSquare.getCol() || oldSquare.getCol() - 2 == newSquare.getCol()) && 
+                        (oldSquare.getRow() + 1 == newSquare.getRow() ||  oldSquare.getRow() - 1 == newSquare.getRow())) ||
+                    ((oldSquare.getRow() + 2 == newSquare.getRow() || oldSquare.getRow() - 2 == newSquare.getRow()) && 
+                        (oldSquare.getCol() + 1 == newSquare.getCol() ||  oldSquare.getCol() - 1 == newSquare.getCol())))){
+                return true;
+            
+        }
+            else{
+                return false;
+        }//getMovement
+        
     }
 
 }
