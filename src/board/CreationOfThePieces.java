@@ -166,8 +166,24 @@ public class CreationOfThePieces {
 
     public BoardSquare[][] getBoard(){
         return this.board;
-    }
+    }//getBoard
     public BoardSquare getSingleBoardSquare(int row, int col){
         return this.board[row][col];
-    }
+    }//getSingleBoardSquare
+
+
+    /**
+     * get individual square []
+     * Change the content of the (row,col) to test individual Pieces, 
+     * For each Piece to test you need to inster the starting location id (row, col)
+     * 
+     * @param row row of the Piece for testing
+     * @param col col of the Piece for testing
+     */
+    public void testPieceMovement(int row, int col){
+        this.getSingleBoardSquare(row, col)
+        .getPiece()
+        .testTheBoardMovement(this.getBoard(), this.getSingleBoardSquare(row, col));
+    }//testPieceMovement
+
 }//CreationOfThePieces end of class
