@@ -58,6 +58,16 @@ public class BoardSquare {
         return this.piece;
     }//getPiece
 
+    //getRow
+    public int getRow(){
+        return this.row;
+    }//getRow
+
+    //getCol
+    public int getCol(){
+        return this.col;
+    }//getCol
+
     public void printRowAndCol(){
         System.out.println("row: " + this.row+ "col: " + this.col);
     }//printRowAndCol
